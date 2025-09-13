@@ -1,3 +1,3 @@
-import { menuPertanyaan } from "./lib/allQuestionWrapped.js";
+import { menuUtama } from "./lib/menuUtama.js";
 
-menuPertanyaan();
+menuUtama();
