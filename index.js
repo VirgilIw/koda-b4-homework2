@@ -5,7 +5,6 @@ import { tampilKeranjang } from './lib/cart.js';
 import { tampilInvoice } from './lib/invoice.js';
 
 const rl = readline.createInterface({ input, output });
-
 let keranjang = [];
 
 const keluar = () => {
@@ -26,13 +25,13 @@ const menuUtama = async () => {
     const pilihan = await rl.question('Pilih opsi (1-4): ');
     switch (pilihan.trim()) {
       case '1':
-        await tampilMenuPesan(rl, keranjang, menuUtama);
+        await tampilMenuPesan(rl, keranjang, menuUtama, keluar);
         break;
       case '2':
-        await tampilKeranjang(rl, keranjang, menuUtama);
+        await tampilKeranjang(rl, keranjang, menuUtama, keluar);
         break;
       case '3':
-        await tampilInvoice(rl, keranjang, menuUtama);
+        await tampilInvoice(rl, keranjang, menuUtama, keluar);
         break;
       case '4':
         keluar();
